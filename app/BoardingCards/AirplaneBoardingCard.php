@@ -10,26 +10,26 @@ class AirplaneBoardingCard extends BoardingCard
 
     private $gateNumber;
 
-    private $counterNumber;
+    private $baggageInfo;
 
     public function __construct(
         $flightNumber,
         $gateNumber,
         $seatNumber,
-        $counterNumber,
+        $baggageInfo,
         DestinationInterface $source,
         DestinationInterface $destination
     )
     {
         $this->flightNumber = $flightNumber;
         $this->gateNumber = $gateNumber;
-        $this->counterNumber = $counterNumber;
+        $this->baggageInfo = $baggageInfo;
 
         parent::__construct($source, $destination, $seatNumber);
     }
 
     public function getJourneyDescription()
     {
-        return 'From '. $this->source->getName() .' Airport, take flight '. $this->flightNumber .' to '. $this->destination->getName() .'. Gate '. $this->gateNumber.', seat '. $this->seatNumber.'. Baggage drop at ticket counter '. $this->counterNumber .'.';
+        return 'From '. $this->source->getName() .', take flight '. $this->flightNumber .' to '. $this->destination->getName() .'. Gate '. $this->gateNumber .', seat '. $this->seatNumber .'. '. $this->baggageInfo .'.';
     }
 }
