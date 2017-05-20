@@ -2,9 +2,7 @@
 
 namespace TripSorter\BoardingCards;
 
-use TripSorter\Destinations\DestinationInterface;
-
-class BoardingCard implements BoardingCardInterface
+abstract class BoardingCard implements BoardingCardInterface
 {
     protected $source;
 
