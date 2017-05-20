@@ -2,22 +2,21 @@
 
 namespace TripSorter\BoardingCards;
 
+use TripSorter\Destinations\DestinationInterface;
+
 class TrainBoardingCard extends BoardingCard
 {
     private $trainNumber;
 
-    private $seatNumber;
-
-    public function __construct($trainNumber, $seatNumber, $source, $destination)
+    public function __construct($trainNumber, $seatNumber, DestinationInterface $source, DestinationInterface $destination)
     {
         $this->trainNumber = $trainNumber;
-        $this->seatNumber = $seatNumber;
 
-        parent::__construct($source, $destination);
+        parent::__construct($source, $destination, $seatNumber);
     }
 
     public function getJourneyDescription()
     {
-        return 'Take train '. $this->trainNumber .' from '. $this->source .' to '. $this->destination .'. Sit in seat '. $this->seatNumber .'';
+        return 'Take train '. $this->trainNumber .' from '. $this->source->getName() .' to '. $this->destination->getName() .'. Sit in seat '. $this->seatNumber .'';
     }
 }
