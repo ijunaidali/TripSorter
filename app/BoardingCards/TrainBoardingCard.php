@@ -8,11 +8,20 @@ class TrainBoardingCard extends BoardingCard
 {
     private $trainNumber;
 
-    public function __construct($trainNumber, $seatNumber, DestinationInterface $source, DestinationInterface $destination)
+    public function __construct(
+        $trainNumber,
+        $seatNumber,
+        DestinationInterface $source,
+        DestinationInterface $destination
+    )
     {
         $this->trainNumber = $trainNumber;
 
-        parent::__construct($source, $destination, $seatNumber);
+        parent::__construct(
+            $source,
+            $destination,
+            $seatNumber
+        );
     }
 
     public function getJourneyDescription()

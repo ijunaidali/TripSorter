@@ -25,7 +25,11 @@ class AirplaneBoardingCard extends BoardingCard
         $this->gateNumber = $gateNumber;
         $this->baggageInfo = $baggageInfo;
 
-        parent::__construct($source, $destination, $seatNumber);
+        parent::__construct(
+            $source,
+            $destination,
+            $seatNumber
+        );
     }
 
     public function getJourneyDescription()

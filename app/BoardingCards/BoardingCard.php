@@ -10,7 +10,11 @@ abstract class BoardingCard implements BoardingCardInterface
 
     protected $seatNumber;
 
-    public function __construct($source, $destination, $seatNumber)
+    public function __construct(
+        $source,
+        $destination,
+        $seatNumber
+    )
     {
         $this->source = $source;
         $this->destination = $destination;

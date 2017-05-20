@@ -12,7 +12,11 @@ class BusBoardingCard extends BoardingCard
         DestinationInterface $destination
     )
     {
-        parent::__construct($source, $destination, $seatNumber);
+        parent::__construct(
+            $source,
+            $destination,
+            $seatNumber
+        );
     }
 
     public function getJourneyDescription()
