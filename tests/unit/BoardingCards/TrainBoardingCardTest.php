@@ -24,6 +24,6 @@ class TrainBoardingCardTest extends TestCase
             new Destination('Barcelona')
         );
         $trainDescription = $trainBoardingCard->getJourneyDescription();
-        $this->assertEquals("Take train 78A from Madrid to Barcelona. Sit in seat 45B", $trainDescription);
+        $this->assertEquals("Take train 78A from Madrid to Barcelona. Sit in seat 45B.", $trainDescription);
     }
 }

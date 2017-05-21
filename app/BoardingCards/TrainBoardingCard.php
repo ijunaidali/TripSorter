@@ -43,6 +43,6 @@ class TrainBoardingCard extends BoardingCard
      */
     public function getJourneyDescription()
     {
-        return 'Take train '. $this->trainNumber .' from '. $this->source->getName() .' to '. $this->destination->getName() .'. Sit in seat '. $this->seatNumber .'';
+        return 'Take train '. $this->trainNumber .' from '. $this->source->getName() .' to '. $this->destination->getName() .'. Sit in seat '. $this->seatNumber .'.';
     }
 }

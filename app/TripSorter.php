@@ -52,7 +52,8 @@ class TripSorter
 
         $currentLocation = $startingLocation;
 
-        while ($boardingCard = (array_key_exists($currentLocation, $sourceIndex)) ? $sourceIndex[$currentLocation] : null) {
+        while ($boardingCard = (array_key_exists($currentLocation, $sourceIndex)) ?
+            $sourceIndex[$currentLocation] : null) {
             array_push($this->sortedBoardingCards, $boardingCard);
             $currentLocation = $boardingCard->getDestination()->getName();
         }
