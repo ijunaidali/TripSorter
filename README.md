@@ -5,7 +5,7 @@ Run composer install command from root directory of the project.
 composer install
 ```
 ## Run Tests
-Run phpnit command from root directory of the project.
+Run phpunit command from root directory of the project.
 ```bash
 phpunit
 ```
