@@ -6,6 +6,10 @@ use PHPUnit\Framework\TestCase;
 use TripSorter\BoardingCards\BusBoardingCard;
 use TripSorter\Destinations\Destination;
 
+/**
+ * Class BusBoardingCardTest
+ * @package TripSorterTest\Unit\BoardingCards
+ */
 class BusBoardingCardTest extends TestCase
 {
     /**
@@ -18,7 +22,7 @@ class BusBoardingCardTest extends TestCase
         $busBoardingCard = new BusBoardingCard(
             null,
             new Destination('Barcelona'),
-            new Destination('Gerona')
+            new Destination('Gerona Airport')
         );
 
         $busDescription = $busBoardingCard->getJourneyDescription();

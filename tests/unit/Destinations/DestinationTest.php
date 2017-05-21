@@ -5,6 +5,10 @@ namespace TripSorterTest\Unit\Destinations;
 use PHPUnit\Framework\TestCase;
 use TripSorter\Destinations\Destination;
 
+/**
+ * Class DestinationTest
+ * @package TripSorterTest\Unit\Destinations
+ */
 class DestinationTest extends TestCase
 {
     /**

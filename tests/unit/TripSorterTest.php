@@ -9,6 +9,10 @@ use TripSorter\BoardingCards\TrainBoardingCard;
 use TripSorter\Destinations\Destination;
 use TripSorter\TripSorter;
 
+/**
+ * Class TripSorterTest
+ * @package TripSorterTest\Unit
+ */
 class TripSorterTest extends TestCase
 {
     /**
@@ -16,14 +20,6 @@ class TripSorterTest extends TestCase
      */
     public function itShouldSortGivenBoardingCards()
     {
-        $expected = [
-            'Take train 78A from Madrid to Barcelona. Sit in seat 45B.',
-            'Take the airport bus from Barcelona to Gerona Airport. No seat assignment.',
-            'From Gerona Airport, take flight SK455 to Stockholm. Gate 45B, seat 3A. Baggage drop at ticket counter 344.',
-            'From Stockholm, take flight SK22 to New York JFK. Gate 22, seat 7B. Baggage will be automatically transferred from your last leg.',
-            'You have arrived at your final destination.'
-        ];
-
         $airplaneCard1 = new AirplaneBoardingCard(
             'SK22',
             '22',
@@ -45,7 +41,7 @@ class TripSorterTest extends TestCase
         $busCard = new BusBoardingCard(
             null,
             new Destination('Barcelona'),
-            new Destination('Gerona')
+            new Destination('Gerona Airport')
         );
 
         $trainCard = new TrainBoardingCard(
@@ -54,6 +50,13 @@ class TripSorterTest extends TestCase
             new Destination('Madrid'),
             new Destination('Barcelona')
         );
+
+        $expected = [
+            $trainCard,
+            $busCard,
+            $airplaneCard2,
+            $airplaneCard1
+        ];
 
         $tripSorter = new TripSorter();
         $tripSorter->addBoardingCard($airplaneCard1);

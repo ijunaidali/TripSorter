@@ -6,6 +6,10 @@ use PHPUnit\Framework\TestCase;
 use TripSorter\BoardingCards\AirplaneBoardingCard;
 use TripSorter\Destinations\Destination;
 
+/**
+ * Class AirplaneBoardingCardTest
+ * @package TripSorterTest\Unit\BoardingCards
+ */
 class AirplaneBoardingCardTest extends TestCase
 {
     /**
@@ -42,6 +46,5 @@ class AirplaneBoardingCardTest extends TestCase
         $airplaneDescription = $airplaneBoardingCard->getJourneyDescription();
 
         $this->assertEquals($expected, $airplaneDescription);
-
     }
 }

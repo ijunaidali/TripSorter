@@ -6,6 +6,10 @@ use PHPUnit\Framework\TestCase;
 use TripSorter\BoardingCards\TrainBoardingCard;
 use TripSorter\Destinations\Destination;
 
+/**
+ * Class TrainBoardingCardTest
+ * @package TripSorterTest\Unit\BoardingCards
+ */
 class TrainBoardingCardTest extends TestCase
 {
     /**

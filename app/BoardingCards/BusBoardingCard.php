@@ -4,8 +4,18 @@ namespace TripSorter\BoardingCards;
 
 use TripSorter\Destinations\DestinationInterface;
 
+/**
+ * Class BusBoardingCard
+ * @package TripSorter\BoardingCards
+ */
 class BusBoardingCard extends BoardingCard
 {
+    /**
+     * BusBoardingCard constructor.
+     * @param $seatNumber
+     * @param DestinationInterface $source
+     * @param DestinationInterface $destination
+     */
     public function __construct(
         $seatNumber,
         DestinationInterface $source,
@@ -19,8 +29,11 @@ class BusBoardingCard extends BoardingCard
         );
     }
 
+    /**
+     * @return string
+     */
     public function getJourneyDescription()
     {
-        return 'Take the airport bus from '. $this->source->getName() .' to '. $this->destination->getName() .' Airport. No seat assignment.';
+        return 'Take the airport bus from '. $this->source->getName() .' to '. $this->destination->getName() .'. No seat assignment.';
     }
 }
