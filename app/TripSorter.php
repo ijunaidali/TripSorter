@@ -57,6 +57,8 @@ class TripSorter
             array_push($this->sortedBoardingCards, $boardingCard);
             $currentLocation = $boardingCard->getDestination()->getName();
         }
+
+        return $this;
     }
 
     /**
@@ -69,10 +71,13 @@ class TripSorter
 
     /**
      * @param BoardingCardInterface $boardingCard
+     * @return $this
      */
     public function addBoardingCard(BoardingCardInterface $boardingCard)
     {
         $this->boardingCards[] = $boardingCard;
+
+        return $this;
     }
 
 }

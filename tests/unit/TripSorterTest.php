@@ -66,14 +66,12 @@ class TripSorterTest extends TestCase
         ];
 
         $tripSorter = new TripSorter();
-        $tripSorter->addBoardingCard($airplaneCard1);
-        $tripSorter->addBoardingCard($airplaneCard2);
-        $tripSorter->addBoardingCard($busCard);
-        $tripSorter->addBoardingCard($trainCard);
-
-        $tripSorter->sortBoardingCards();
-
-        $sortedBoardingCards = $tripSorter->getSortedBoardingCards();
+        $sortedBoardingCards = $tripSorter->addBoardingCard($airplaneCard1)
+            ->addBoardingCard($airplaneCard2)
+            ->addBoardingCard($busCard)
+            ->addBoardingCard($trainCard)
+            ->sortBoardingCards()
+            ->getSortedBoardingCards();
 
         $this->assertEquals($expectedBoardingCardOrder, $sortedBoardingCards);
 

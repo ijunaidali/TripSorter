@@ -24,6 +24,11 @@ abstract class BoardingCard implements BoardingCardInterface
     protected $seatNumber;
 
     /**
+     * @return mixed
+     */
+    abstract public function getJourneyDescription();
+
+    /**
      * BoardingCard constructor.
      * @param $source
      * @param $destination

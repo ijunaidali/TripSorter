@@ -11,11 +11,6 @@ interface BoardingCardInterface
     /**
      * @return mixed
      */
-    public function getJourneyDescription();
-
-    /**
-     * @return mixed
-     */
     public function getSource();
 
     /**
