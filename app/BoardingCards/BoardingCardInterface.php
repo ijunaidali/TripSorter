@@ -9,12 +9,12 @@ namespace TripSorter\BoardingCards;
 interface BoardingCardInterface
 {
     /**
-     * @return mixed
+     * @return string
      */
     public function getSource();
 
     /**
-     * @return mixed
+     * @return string
      */
     public function getDestination();
 }

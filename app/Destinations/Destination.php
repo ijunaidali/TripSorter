@@ -23,7 +23,7 @@ class Destination implements DestinationInterface
     }
 
     /**
-     * @return mixed
+     * @return string
      */
     public function getName()
     {

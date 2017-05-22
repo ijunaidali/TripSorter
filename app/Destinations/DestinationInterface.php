@@ -9,7 +9,7 @@ namespace TripSorter\Destinations;
 interface DestinationInterface
 {
     /**
-     * @return mixed
+     * @return string
      */
     public function getName();
 }

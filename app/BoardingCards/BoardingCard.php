@@ -24,7 +24,7 @@ abstract class BoardingCard implements BoardingCardInterface
     protected $seatNumber;
 
     /**
-     * @return mixed
+     * @return string
      */
     abstract public function getJourneyDescription();
 
@@ -46,7 +46,7 @@ abstract class BoardingCard implements BoardingCardInterface
     }
 
     /**
-     * @return mixed
+     * @return string
      */
     public function getSource()
     {
@@ -54,7 +54,7 @@ abstract class BoardingCard implements BoardingCardInterface
     }
 
     /**
-     * @return mixed
+     * @return string
      */
     public function getDestination()
     {
